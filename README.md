@@ -1,4 +1,5 @@
 https://kt-rubyonrails.herokuapp.com/
+https://kt-rubyonrails.herokuapp.com/articles/new
 
 # README
 ![](https://i.ibb.co/PFWMdfr/image.png)
