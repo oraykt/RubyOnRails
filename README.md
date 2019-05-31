@@ -1,8 +1,7 @@
-https://kt-rubyonrails.herokuapp.com/ <br>
 
-# README
+## https://kt-rubyonrails.herokuapp.com/ 
 ![](https://i.ibb.co/PFWMdfr/image.png)
-
+<br/>
 ~~1) Create a new rails application and call it alpha-blog <br>~~
 ~~2) Ensure you can run the server and preview the application <br>~~
 ~~3) Pages Controller <br>~~
