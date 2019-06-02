@@ -3,20 +3,10 @@
     <div class="card">
       <div class="card-body">
         <h5 class="card-title border-bottom"> <%= @article.title %></h5>
-
         <p class="card-text"><%= @article.description %></p>
-        <%= link_to "Edit This Article", edit_article_path(@article), class: "btn btn-primary" %>
-        <%= link_to "Back to articles listing", articles_path, class:"btn btn-info" %>
-        <%= link_to "Delete", article_path(@article), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <%= link_to "Edit This Article", edit_article_path(@article), class: "btn btn-sm btn-primary" %>
+        <%= link_to "Back to articles listing", articles_path, class:"btn btn-sm btn-info" %>
+        <%= link_to "Delete", article_path(@article), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-sm btn-danger" %>
       </div>
     </div>
   </div>
