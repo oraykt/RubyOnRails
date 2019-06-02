@@ -1,5 +1,8 @@
 
 ## https://kt-rubyonrails.herokuapp.com/ 
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5a6beea801834d52b480cce17e94b1b2)](https://app.codacy.com/app/oraykt/RubyOnRails?utm_source=github.com&utm_medium=referral&utm_content=oraykt/RubyOnRails&utm_campaign=Badge_Grade_Dashboard)
+
 ![](https://i.ibb.co/PFWMdfr/image.png)
 <br/>
 ~~1) Create a new rails application and call it alpha-blog <br>~~
