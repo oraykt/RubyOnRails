@@ -52,7 +52,7 @@ GEM
     bindex (0.7.0)
     bootsnap (1.4.4)
       msgpack (~> 1.0)
-    bootstrap (4.2.1)
+    bootstrap (4.3.1)
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 1.14.3, < 2)
       sassc-rails (>= 2.0.0)
@@ -80,7 +80,6 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.5)
     crass (1.0.4)
-    duktape (2.3.0.0)
     erubi (1.8.0)
     execjs (2.7.0)
     ffi (1.11.1-x64-mingw32)
@@ -207,12 +206,11 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap (>= 1.1.0)
-  bootstrap (~> 4.2.1)
+  bootstrap (>= 4.3.1)
   byebug
   capybara (>= 2.15)
   chromedriver-helper
   coffee-rails (~> 4.2)
-  duktape
   jbuilder (~> 2.5)
   jquery-rails
   pg
