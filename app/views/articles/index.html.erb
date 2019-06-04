@@ -3,33 +3,25 @@
 <p>
 <%= link_to "Create new article", new_article_path, class:"btn btn-primary" %>
 </p>
-
-<div class="table-responsive">
-<table class="table table-bordered">
-  <thead>
-  <tr>
-    <th scope="col">Title</th>
-    <th scope="col">Description</th>
-    <th scope="col">Action</th>
-  </tr>
-  </thead>
-  <tbody>
+<div class="row">
   <% @articles.each do | article |%>
-    <tr>
-      <td>
-        <%= article.title %>
-      </td>
-      <td>
+<div class="card text-center">
+    <div class="card-header">
+      Created By: <%= article.user.username if article.user %>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"><%= article.title %></h5>
+      <p class="card-text">
         <%= article.description %>
-      </td>
-      <td>
-        <%= link_to "Show", article_path(article), class: "btn btn-sm btn-info" %>
-        <%= link_to "Edit", edit_article_path(article), class: "btn btn-sm btn-warning"  %>
-        <%= link_to "Delete", article_path(article), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-sm btn-danger" %>
-      </td>
-    </tr>
+      </p>
+      <%= link_to "Show", article_path(article), class: "btn btn-sm btn-success" %>
+      <%= link_to "Edit", edit_article_path(article), class: "btn btn-sm btn-warning"  %>
+      <%= link_to "Delete", article_path(article), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-sm btn-danger" %>
+    </div>
+    <div class="card-footer text-muted">
+      <%= time_ago_in_words(article.created_at) %> ago, last updated: <%= time_ago_in_words(article.updated_at) %> ago.
+    </div>
+  </div>
   <%end %>
 
-  </tbody>
-</table>
 </div>
