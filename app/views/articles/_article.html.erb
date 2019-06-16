@@ -1,0 +1,21 @@
+<% obj.each do | article |%>
+  <div class="col-sm-6", style="margin-top: 15px;">
+    <div class="card text-center">
+      <div class="card-header">
+        Created By: <%= article.user.username if article.user %>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title text-center"><%= article.title %></h5>
+        <p class="card-text  text-center">
+          <%= article.description %>
+        </p>
+        <%= link_to "Show", article_path(article), class: "btn btn-sm btn-success" %>
+        <%= link_to "Edit", edit_article_path(article), class: "btn btn-sm btn-warning"  %>
+        <%= link_to "Delete", article_path(article), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-sm btn-danger" %>
+      </div>
+      <div class="card-footer text-muted text-center">
+        <%= time_ago_in_words(article.created_at) %> ago, last updated: <%= time_ago_in_words(article.updated_at) %> ago.
+      </div>
+    </div>
+  </div>
+<%end %>
