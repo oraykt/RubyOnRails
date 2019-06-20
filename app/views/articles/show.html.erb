@@ -1,4 +1,4 @@
-<div class="row center">
+<div class="center">
   <div class="col-sm-6">
     <div class="card">
       <% if @article.user %>
@@ -23,9 +23,11 @@
       <div class="card-body">
         <h5 class="card-title border-bottom"> <%= @article.title %></h5>
         <p class="card-text"><%= @article.description %></p>
-        <%= link_to "Edit This Article", edit_article_path(@article), class: "btn btn-sm btn-primary" %>
+        <% if logged_in? && current_user == @article.user %>
+          <%= link_to "Edit This Article", edit_article_path(@article), class: "btn btn-sm btn-primary" %>
+          <%= link_to "Delete", article_path(@article), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-sm btn-danger" %>
+      <% end %>
         <%= link_to "Back to articles listing", articles_path, class:"btn btn-sm btn-info" %>
-        <%= link_to "Delete", article_path(@article), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-sm btn-danger" %>
       </div>
     </div>
   </div>
