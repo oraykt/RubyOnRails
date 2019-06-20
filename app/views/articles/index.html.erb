@@ -3,8 +3,11 @@
 <p>
 <%= link_to "Create new article", new_article_path, class:"btn btn-primary" %>
 </p>
-<div class="row">
-
+<div class="d-flex justify-content-center">
+  <%= will_paginate @collection, renderer: BootstrapPagination::Rails %>
+</div>
   <%= render 'article' , obj: @articles%>
 
+<div class="d-flex justify-content-center">
+  <%= will_paginate @collection, renderer: BootstrapPagination::Rails %>
 </div>
