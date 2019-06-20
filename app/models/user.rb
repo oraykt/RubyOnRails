@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :articles
+  has_many :articles, dependent: :destroy
   before_save { self.email = email.downcase }
   #   https://guides.rubyonrails.org/active_record_validations.html
   validates :username, presence: true,

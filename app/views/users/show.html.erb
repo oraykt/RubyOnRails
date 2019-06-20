@@ -5,7 +5,9 @@
     <%= gravatar_for @user, size: 150 %>
 
 </div>
-
+<div align="center"><% if logged_in? and current_user.admin? %>
+    <%= link_to 'Delete User', user_path(@user), method: :delete, class: 'btn btn-sm btn-danger' %>
+  <% end %></div>
 <h4 align="center"><%= @user.username %>'s articles'</h4>
 <div class="d-flex justify-content-center">
   <%= will_paginate @user_articles, renderer: BootstrapPagination::Rails %>
