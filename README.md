@@ -10,7 +10,12 @@
 ~~3) Pages Controller <br>~~
 ~~4) Ensure you have appropriate routes <br>~~
 ~~5) Create a homepage, about <br>~~
-
+<br/>
+1) I am a Junior Rails Developer
+2) I have been hired by a startup which built the alpha-blog
+3) Alpha blog has taken off, lots of users and articles
+4) They haven't used automated tests before but that's changing
+5) CEO wants automated tests on all new features
 
 
 ## How it works ?
