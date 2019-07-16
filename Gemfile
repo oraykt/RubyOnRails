@@ -25,8 +25,8 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
-gem 'will_paginate-bootstrap'
 gem 'will_paginate', '~>3.1.7'
+gem 'will_paginate-bootstrap'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
@@ -55,6 +55,7 @@ end
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
+  gem 'rails-controller-testing'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper', '~>1.2.0'
